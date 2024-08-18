@@ -1,7 +1,7 @@
 'use client'
 
 import { useTheme, alpha } from '@mui/material/styles'
-import { Button } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 
 // Types
 import type { TextButtonProps } from '@/types/components/atoms/buttons/text'
@@ -29,7 +29,7 @@ const PrimaryButtonAtom = (props: TextButtonProps) => {
 				py: 1.25,
 				px: 2.5,
 				fontSize: 16,
-				fontWeight: 600,
+				textAlign: 'inherit',
 				textTransform: 'inherit',
 				color: theme.palette.mode === 'dark' ? color[100] : color[700],
 				bgcolor: alpha(color[500], 0.15),
@@ -41,14 +41,16 @@ const PrimaryButtonAtom = (props: TextButtonProps) => {
 					bgcolor: alpha(color[500], theme.palette.mode === 'dark' ? 0.2 : 0.1),
 					boxShadow: `${color[300]} 0 -3px 0 inset`
 				},
-				'&:focus, &:active': {
+				'&:active': {
 					color: theme.palette.mode === 'dark' ? color[200] : color[700],
 					boxShadow: `${color[700]} 0 0 0 1px inset, ${color[700]} 0 -3px 0 inset`,
 					transform: 'translateY(2px)'
 				}
 			}}
 		>
-			{t(title)}
+			<Typography component="span" fontSize={16} fontWeight={600} flexGrow={1}>
+				{t(title)}
+			</Typography>
 		</Button>
 	)
 }

@@ -30,7 +30,7 @@ const IconButtonAtom = (props: IconButtonProps) => {
 					bgcolor: alpha(color[500], theme.palette.mode === 'dark' ? 0.2 : 0.1),
 					boxShadow: `${color[300]} 0 -3px 0 inset`
 				},
-				'&:focus, &:active': {
+				'&:active': {
 					color: theme.palette.mode === 'dark' ? color[200] : color[700],
 					boxShadow: `${color[700]} 0 0 0 1px inset, ${color[700]} 0 -3px 0 inset`,
 					transform: 'translateY(2px)'

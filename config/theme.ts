@@ -2,7 +2,7 @@
 import type { ThemeProps } from '@/types/configs/theme'
 
 const ThemeConfig: ThemeProps = {
-	color: '#8191ff',
+	color: '#a60bff',
 	listWidth: 240
 }
 

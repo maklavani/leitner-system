@@ -1,5 +1,11 @@
 {
 	"button": {
-		"goHome": "Go home"
+		"back": "Back",
+		"dark": "Dark",
+		"goHome": "Go home",
+		"languages": "Languages",
+		"light": "Light",
+		"system": "System",
+		"theme": "Theme"
 	}
 }

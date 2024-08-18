@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { ListItem } from '@mui/material'
 
 // Types
-import type { ListItemProps } from '@/types/components/molecules/list-item'
+import type { ListItemProps } from '@/types/components/atoms/list-item'
 
 // Components
 const PrimaryButtonAtom = dynamic(() => import('@/components/atoms/buttons/text/primary'))
 
-const ListItemMolecule = (props: ListItemProps) => {
+const ListItemAtom = (props: ListItemProps) => {
 	// Props
 	const { lng, link, title, icon, color } = props
 
@@ -27,4 +27,4 @@ const ListItemMolecule = (props: ListItemProps) => {
 	)
 }
 
-export default ListItemMolecule
+export default ListItemAtom
