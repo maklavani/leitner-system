@@ -1,6 +1,8 @@
 # Release notes
 All notable changes to this project will be documented in this file.
 
+- Created a `FUNDING.yml` file in the **.github** directory, providing details on how to support the project financially
+
 ## 0.1.1
 - Updated details in the **package.json** file
 
