@@ -13,7 +13,7 @@ const LogoShapeAtom = (props: LogoShapeProps) => {
 	const { lng } = props
 
 	return (
-		<Link href={`/${lng}`}>
+		<Link href={`/${lng}`} tabIndex={-1}>
 			<Button
 				size="large"
 				aria-label="Leitner System logo"

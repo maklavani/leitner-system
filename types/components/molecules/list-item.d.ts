@@ -2,11 +2,10 @@
 import type { ReactNode } from 'react'
 import type { Color } from '@mui/material'
 
-export type TextButtonProps = {
-	lng?: string
+export type ListItemProps = {
+	lng: string
+	link: string
 	title: string
 	color: Color
-	startIcon?: ReactNode
-	endIcon?: ReactNode
-	onClick?: () => void
+	icon?: ReactNode
 }

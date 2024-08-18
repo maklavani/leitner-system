@@ -14,16 +14,17 @@ const ExtendThemeConfig = (dir: Direction) =>
 			light: {
 				palette: {
 					mode: 'light',
-					primary: { light: '#b199f4', main: '#7d54ed', dark: '#511ae7', contrastText: '#fff' },
-					secondary: { light: '#e8b6e1', main: '#ba39a7', dark: '#912c82', contrastText: '#fff' }
+					primary: { light: '#b73bff', main: '#a60bff', dark: '#510081', contrastText: '#fff' },
+					secondary: { light: '#b8edff', main: '#00bbfa', dark: '#0083af', contrastText: '#333333' },
+					background: { default: '#fafafa', paper: '#eee' }
 				}
 			},
 			dark: {
 				palette: {
 					mode: 'dark',
-					primary: { light: '#b199f4', main: '#7d54ed', dark: '#511ae7', contrastText: '#fff' },
-					secondary: { light: '#e8b6e1', main: '#ba39a7', dark: '#912c82', contrastText: '#fff' },
-					background: { default: '#0f132e', paper: '#252f72' }
+					primary: { light: '#b73bff', main: '#a60bff', dark: '#510081', contrastText: '#fff' },
+					secondary: { light: '#b8edff', main: '#00bbfa', dark: '#0083af', contrastText: '#333333' },
+					background: { default: '#131313', paper: '#333' }
 				}
 			}
 		},

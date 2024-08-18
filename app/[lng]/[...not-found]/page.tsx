@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { Container, Grid, Paper } from '@mui/material'
+import { green } from '@mui/material/colors'
 import { Error as ErrorIcon, Link as LinkIcon } from '@mui/icons-material'
 
 // Types
@@ -43,7 +44,7 @@ const NotFoundPage = (props: PageProps) => {
 	const lng = params?.lng ?? LocaleConfig.default
 
 	return (
-		<Grid bgcolor="grey.100">
+		<Grid bgcolor="paper.default">
 			<Container maxWidth="sm" sx={{ display: 'flex', alignItems: 'center', height: '100dvh' }}>
 				<Paper variant="outlined" sx={{ width: 1, borderRadius: 2 }}>
 					<Grid container flexDirection="column" alignItems="center" spacing={2} py={4} px={{ xs: 1, md: 2 }}>
@@ -61,7 +62,7 @@ const NotFoundPage = (props: PageProps) => {
 
 						<Grid item>
 							<Link href="/">
-								<PrimaryButtonAtom lng={lng} title="form:button.goHome" startIcon={<LinkIcon />} />
+								<PrimaryButtonAtom lng={lng} title="form:button.goHome" startIcon={<LinkIcon />} color={green} />
 							</Link>
 						</Grid>
 					</Grid>

@@ -2,6 +2,7 @@
 All notable changes to this project will be documented in this file.
 
 - Added **PWA** for project
+- Created an `Appbar` component for the **desktop**
 
 ## 0.1.3
 - Added **logo** files to the project
