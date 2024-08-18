@@ -1,6 +1,7 @@
 # Release notes
 All notable changes to this project will be documented in this file.
 
+## 0.2.0
 - Added **PWA** for project
 - Created an `Appbar` component for the **desktop**
 
