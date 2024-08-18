@@ -1,6 +1,8 @@
 # Release notes
 All notable changes to this project will be documented in this file.
 
+- Added **PWA** for project
+
 ## 0.1.3
 - Added **logo** files to the project
 
