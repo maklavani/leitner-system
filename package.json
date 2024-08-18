@@ -1,6 +1,6 @@
 {
 	"name": "leitner-system",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"private": false,
 	"description": "A Next.js and Material-UI implementation of the Leitner System, a spaced repetition system for learning and memorization.",
 	"author": "Hossein Maklavani <hos.mohamadi@gmail.com> (https://maklavani.dev/)",
