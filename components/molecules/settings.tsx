@@ -5,12 +5,13 @@ import dynamic from 'next/dynamic'
 import { usePathname } from 'next/navigation'
 import { useTheme, useColorScheme } from '@mui/material/styles'
 import { useMediaQuery, Grid, Menu, MenuItem, Link } from '@mui/material'
-import { amber, pink } from '@mui/material/colors'
+import { amber, pink, grey } from '@mui/material/colors'
 
 import {
 	BrightnessAuto as BrightnessAutoIcon,
 	LightMode as LightModeIcon,
 	NightsStay as NightsStayIcon,
+	GitHub as GitHubIcon,
 	Translate as TranslateIcon,
 	ArrowForwardIos as ArrowForwardIosIcon,
 	ArrowBackIosNew as ArrowBackIosNewIcon,
@@ -94,6 +95,15 @@ const SettingsMolecule = (props: SettingsProps) => {
 								onClick={changeMode}
 							/>
 						)}
+					</Grid>
+				)}
+
+				{!menuParent && (
+					<Grid item>
+						<Link href="https://github.com/maklavani/Leitner-System">
+							{!greaterThanMedium && <PrimaryButtonAtom lng={lng} title="form:button.github" color={grey} startIcon={<GitHubIcon />} />}
+							{greaterThanMedium && <IconButtonAtom color={grey} icon={<GitHubIcon />} />}
+						</Link>
 					</Grid>
 				)}
 

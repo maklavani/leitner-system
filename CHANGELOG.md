@@ -1,6 +1,8 @@
 # Release notes
 All notable changes to this project will be documented in this file.
 
+- Added a `github` link to the **Appbar** component
+
 ## 0.3.0
 - Created an `Appbar` component for the **mobile**
 
