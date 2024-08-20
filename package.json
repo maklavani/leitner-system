@@ -32,13 +32,13 @@
 	"funding": [
 		{
 			"type": "open_collective",
-			"url": "https://opencollective.com/maklavani"
+			"url": "https://opencollective.com/leitner"
 		}
 	],
 	"bugs": {
 		"url": "https://github.com/maklavani/Leitner-System/issues"
 	},
-	"homepage": "https://leitner.vercel.app",
+	"homepage": "https://leitnersystem.app",
 	"dependencies": {
 		"@emotion/cache": "^11.13.1",
 		"@emotion/react": "^11.13.0",
