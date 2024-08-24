@@ -3,6 +3,7 @@ All notable changes to this project will be documented in this file.
 
 - Added `@vercel/postgres-kysely` package to the project
 - Upgraded the packages
+- Added a `link` to **Open Collective** in the appbar
 
 ## 0.3.2
 - Added **LICENSE** file to the project

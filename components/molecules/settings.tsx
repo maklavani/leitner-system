@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 import { usePathname } from 'next/navigation'
 import { useTheme, useColorScheme } from '@mui/material/styles'
 import { useMediaQuery, Grid, Menu, MenuItem, Link } from '@mui/material'
-import { amber, pink, grey } from '@mui/material/colors'
+import { amber, pink, blue, grey } from '@mui/material/colors'
 
 import {
 	BrightnessAuto as BrightnessAutoIcon,
@@ -30,6 +30,7 @@ import { useTranslation } from '@/helpers/i18n/client'
 // Components
 const PrimaryButtonAtom = dynamic(() => import('@/components/atoms/buttons/text/primary'))
 const IconButtonAtom = dynamic(() => import('@/components/atoms/buttons/icons/icon'))
+const OpenCollectiveIconAtom = dynamic(() => import('@/components/atoms/icons/open-collective'))
 
 const SettingsMolecule = (props: SettingsProps) => {
 	// Props
@@ -95,6 +96,15 @@ const SettingsMolecule = (props: SettingsProps) => {
 								onClick={changeMode}
 							/>
 						)}
+					</Grid>
+				)}
+
+				{!menuParent && (
+					<Grid item>
+						<Link href="https://opencollective.com/leitner">
+							{!greaterThanMedium && <PrimaryButtonAtom lng={lng} title="form:button.openCollective" color={blue} startIcon={<OpenCollectiveIconAtom />} />}
+							{greaterThanMedium && <IconButtonAtom color={blue} icon={<OpenCollectiveIconAtom />} />}
+						</Link>
 					</Grid>
 				)}
 
