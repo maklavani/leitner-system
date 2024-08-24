@@ -100,7 +100,7 @@ const SettingsMolecule = (props: SettingsProps) => {
 
 				{!menuParent && (
 					<Grid item>
-						<Link href="https://github.com/maklavani/Leitner-System" target="_blank">
+						<Link href="https://github.com/maklavani/Leitner-System">
 							{!greaterThanMedium && <PrimaryButtonAtom lng={lng} title="form:button.github" color={grey} startIcon={<GitHubIcon />} />}
 							{greaterThanMedium && <IconButtonAtom color={grey} icon={<GitHubIcon />} />}
 						</Link>
