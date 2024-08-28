@@ -1,6 +1,7 @@
 # Release notes
 All notable changes to this project will be documented in this file.
 
+## 0.4.0
 - Upgraded the packages
 - Modified the new configuration for **MUI**
 - Removed all **deprecated** `Grid` components and converted to `Grid2`
