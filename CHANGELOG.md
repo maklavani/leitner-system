@@ -3,6 +3,7 @@ All notable changes to this project will be documented in this file.
 
 - Upgraded the packages
 - Modified the new configuration for **MUI**
+- Removed all **deprecated** `Grid` components and converted to `Grid2`
 
 ## 0.3.3
 - Added `@vercel/postgres-kysely` package to the project

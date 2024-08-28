@@ -3,8 +3,9 @@
 import { useRef, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { usePathname } from 'next/navigation'
+import { dir } from 'i18next'
 import { useTheme, useColorScheme } from '@mui/material/styles'
-import { useMediaQuery, Grid, Menu, MenuItem, Link } from '@mui/material'
+import { useMediaQuery, Grid2 as Grid, Menu, MenuItem, Link } from '@mui/material'
 import { amber, pink, blue, grey } from '@mui/material/colors'
 
 import {
@@ -38,12 +39,12 @@ const SettingsMolecule = (props: SettingsProps) => {
 
 	// Variables
 	const { t } = useTranslation(lng)
-	const theme = useTheme()
+	const muiTheme = useTheme()
 	const { mode, setMode } = useColorScheme()
 	const pathname = usePathname()
 	const anchorEl = useRef<HTMLDivElement>(null)
 	const [open, setOpen] = useState<boolean>(false)
-	const greaterThanMedium = useMediaQuery(theme.breakpoints.up('md'))
+	const greaterThanMedium = useMediaQuery(muiTheme.breakpoints.up('md'))
 	const preferredColorScheme = useMediaQuery('(prefers-color-scheme: dark)')
 
 	// Callbacks
@@ -53,17 +54,17 @@ const SettingsMolecule = (props: SettingsProps) => {
 	}
 
 	return (
-		<Grid item>
+		<Grid>
 			<Grid container rowSpacing={{ xs: 1, md: 'inherit' }} columnSpacing={1}>
 				{!menuParent && (
-					<Grid ref={anchorEl} item>
+					<Grid ref={anchorEl}>
 						{!greaterThanMedium && (
 							<PrimaryButtonAtom
 								lng={lng}
 								title="form:button.languages"
 								color={amber}
 								startIcon={<TranslateIcon />}
-								endIcon={theme.direction === 'rtl' ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon />}
+								endIcon={dir(lng) === 'rtl' ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon />}
 								onClick={() => {
 									if (setMenuParent) setMenuParent('languages')
 								}}
@@ -75,14 +76,14 @@ const SettingsMolecule = (props: SettingsProps) => {
 				)}
 
 				{!menuParent && (
-					<Grid item>
+					<Grid>
 						{!greaterThanMedium && (
 							<PrimaryButtonAtom
 								lng={lng}
 								title="form:button.theme"
 								color={pink}
 								startIcon={mode === 'system' ? <BrightnessAutoIcon /> : mode === 'light' ? <LightModeIcon /> : <NightsStayIcon />}
-								endIcon={theme.direction === 'rtl' ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon />}
+								endIcon={dir(lng) === 'rtl' ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon />}
 								onClick={() => {
 									if (setMenuParent) setMenuParent('theme')
 								}}
@@ -100,7 +101,7 @@ const SettingsMolecule = (props: SettingsProps) => {
 				)}
 
 				{!menuParent && (
-					<Grid item>
+					<Grid>
 						<Link href="https://opencollective.com/leitner">
 							{!greaterThanMedium && <PrimaryButtonAtom lng={lng} title="form:button.openCollective" color={blue} startIcon={<OpenCollectiveIconAtom />} />}
 							{greaterThanMedium && <IconButtonAtom color={blue} icon={<OpenCollectiveIconAtom />} />}
@@ -109,7 +110,7 @@ const SettingsMolecule = (props: SettingsProps) => {
 				)}
 
 				{!menuParent && (
-					<Grid item>
+					<Grid>
 						<Link href="https://github.com/maklavani/Leitner-System">
 							{!greaterThanMedium && <PrimaryButtonAtom lng={lng} title="form:button.github" color={grey} startIcon={<GitHubIcon />} />}
 							{greaterThanMedium && <IconButtonAtom color={grey} icon={<GitHubIcon />} />}
@@ -119,7 +120,7 @@ const SettingsMolecule = (props: SettingsProps) => {
 
 				{menuParent === 'languages' &&
 					LocaleConfig.list.map((item, index) => (
-						<Grid key={index} item>
+						<Grid key={index}>
 							<Link href={pathname.replace(`/${lng}`, `/${item}`)}>
 								<PrimaryButtonAtom lng={lng} title={`${t(`common:title.${item}`)} (${item})`} color={amber} startIcon={<TranslateIcon />} />
 							</Link>
@@ -128,7 +129,7 @@ const SettingsMolecule = (props: SettingsProps) => {
 
 				{menuParent === 'theme' && (
 					<>
-						<Grid item>
+						<Grid>
 							<PrimaryButtonAtom
 								lng={lng}
 								title="form:button.system"
@@ -139,7 +140,7 @@ const SettingsMolecule = (props: SettingsProps) => {
 							/>
 						</Grid>
 
-						<Grid item>
+						<Grid>
 							<PrimaryButtonAtom
 								lng={lng}
 								title="form:button.light"
@@ -150,7 +151,7 @@ const SettingsMolecule = (props: SettingsProps) => {
 							/>
 						</Grid>
 
-						<Grid item>
+						<Grid>
 							<PrimaryButtonAtom
 								lng={lng}
 								title="form:button.dark"

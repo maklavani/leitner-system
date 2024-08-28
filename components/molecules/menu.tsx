@@ -1,7 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { Grid } from '@mui/material'
+import { Grid2 as Grid } from '@mui/material'
 import { cyan, blueGrey, green } from '@mui/material/colors'
 import { Villa as VillaIcon, CloudDownload as CloudDownloadIcon, Tune as TuneIcon } from '@mui/icons-material'
 
@@ -17,17 +17,17 @@ const MenuMolecule = (props: MenuProps) => {
 
 	return (
 		!menuParent && (
-			<Grid item>
+			<Grid>
 				<Grid component="ul" container rowSpacing={{ xs: 1, md: 'inherit' }} columnSpacing={{ md: 2 }} m={0} p={0}>
-					<Grid item>
+					<Grid>
 						<ListItemAtom lng={lng} link="/" title="links:home" color={cyan} icon={<VillaIcon />} />
 					</Grid>
 
-					<Grid item>
+					<Grid>
 						<ListItemAtom lng={lng} link="/backup" title="links:backup" color={green} icon={<CloudDownloadIcon />} />
 					</Grid>
 
-					<Grid item>
+					<Grid>
 						<ListItemAtom lng={lng} link="/settings" title="links:settings" color={blueGrey} icon={<TuneIcon />} />
 					</Grid>
 				</Grid>

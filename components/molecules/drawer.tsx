@@ -1,8 +1,8 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { useTheme } from '@mui/material/styles'
-import { SwipeableDrawer, Toolbar, Grid } from '@mui/material'
+import { dir } from 'i18next'
+import { SwipeableDrawer, Toolbar, Grid2 as Grid } from '@mui/material'
 import { red, blueGrey } from '@mui/material/colors'
 import { Close as CloseIcon, ArrowForwardIos as ArrowForwardIosIcon, ArrowBackIosNew as ArrowBackIosNewIcon } from '@mui/icons-material'
 
@@ -16,9 +16,6 @@ const IconButtonAtom = dynamic(() => import('@/components/atoms/buttons/icons/ic
 const DrawerMolecule = (props: DrawerProps) => {
 	// Props
 	const { lng, open, setOpen, menuParent, setMenuParent, children } = props
-
-	// Variables
-	const theme = useTheme()
 
 	return (
 		<SwipeableDrawer
@@ -51,12 +48,12 @@ const DrawerMolecule = (props: DrawerProps) => {
 
 			<Grid container direction="column" justifyContent={!menuParent ? 'space-between' : 'start'} spacing={3} flexGrow={1} p={2}>
 				{menuParent && (
-					<Grid item>
+					<Grid>
 						<PrimaryButtonAtom
 							lng={lng}
 							title="form:button.back"
 							color={blueGrey}
-							endIcon={theme.direction === 'rtl' ? <ArrowForwardIosIcon /> : <ArrowBackIosNewIcon />}
+							endIcon={dir(lng) === 'rtl' ? <ArrowForwardIosIcon /> : <ArrowBackIosNewIcon />}
 							onClick={() => {
 								if (setMenuParent) setMenuParent('')
 							}}

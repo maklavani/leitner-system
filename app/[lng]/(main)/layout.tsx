@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import { Box, Grid, Toolbar, Container } from '@mui/material'
+import { Box, Grid2 as Grid, Toolbar, Container } from '@mui/material'
 
 // Types
 import type { Metadata } from 'next'
