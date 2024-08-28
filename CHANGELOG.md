@@ -1,6 +1,8 @@
 # Release notes
 All notable changes to this project will be documented in this file.
 
+- Upgraded the packages
+
 ## 0.3.3
 - Added `@vercel/postgres-kysely` package to the project
 - Upgraded the packages
