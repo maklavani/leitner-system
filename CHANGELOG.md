@@ -1,6 +1,7 @@
 # Release notes
 All notable changes to this project will be documented in this file.
 
+## 0.4.2
 - Removed extra `enableCssLayer` AppCache
 
 ## 0.4.1
