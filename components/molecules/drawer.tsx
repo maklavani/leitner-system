@@ -17,6 +17,9 @@ const DrawerMolecule = (props: DrawerProps) => {
 	// Props
 	const { lng, open, setOpen, menuParent, setMenuParent, children } = props
 
+	// Variables
+	const lngDir = dir(lng)
+
 	return (
 		<SwipeableDrawer
 			anchor="right"
@@ -53,7 +56,7 @@ const DrawerMolecule = (props: DrawerProps) => {
 							lng={lng}
 							title="form:button.back"
 							color={blueGrey}
-							endIcon={dir(lng) === 'rtl' ? <ArrowForwardIosIcon /> : <ArrowBackIosNewIcon />}
+							endIcon={lngDir === 'rtl' ? <ArrowForwardIosIcon /> : <ArrowBackIosNewIcon />}
 							onClick={() => {
 								if (setMenuParent) setMenuParent('')
 							}}

@@ -38,6 +38,7 @@ const SettingsMolecule = (props: SettingsProps) => {
 	const { lng, menuParent, setMenuParent } = props
 
 	// Variables
+	const lngDir = dir(lng)
 	const { t } = useTranslation(lng)
 	const muiTheme = useTheme()
 	const { mode, setMode } = useColorScheme()
@@ -64,7 +65,7 @@ const SettingsMolecule = (props: SettingsProps) => {
 								title="form:button.languages"
 								color={amber}
 								startIcon={<TranslateIcon />}
-								endIcon={dir(lng) === 'rtl' ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon />}
+								endIcon={lngDir === 'rtl' ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon />}
 								onClick={() => {
 									if (setMenuParent) setMenuParent('languages')
 								}}
@@ -83,7 +84,7 @@ const SettingsMolecule = (props: SettingsProps) => {
 								title="form:button.theme"
 								color={pink}
 								startIcon={mode === 'system' ? <BrightnessAutoIcon /> : mode === 'light' ? <LightModeIcon /> : <NightsStayIcon />}
-								endIcon={dir(lng) === 'rtl' ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon />}
+								endIcon={lngDir === 'rtl' ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon />}
 								onClick={() => {
 									if (setMenuParent) setMenuParent('theme')
 								}}
