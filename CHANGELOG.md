@@ -1,6 +1,7 @@
 # Release notes
 All notable changes to this project will be documented in this file.
 
+## 0.4.1
 - Added `dir` from `i18next` for detecting **language** direction
 
 ## 0.4.0
