@@ -1,6 +1,8 @@
 # Release notes
 All notable changes to this project will be documented in this file.
 
+- Added `dir` from `i18next` for detecting **language** direction
+
 ## 0.4.0
 - Upgraded the packages
 - Modified the new configuration for **MUI**
